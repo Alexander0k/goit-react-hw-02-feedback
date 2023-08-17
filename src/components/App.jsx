@@ -36,13 +36,12 @@ import Notification from "./Notification/Notification"
   
    render() {
      const { good, neutral, bad } = this.state
-     const {handleBtnClick, countTotalFeedback, countPositiveFeedbackPercentage} = this
     return (
       <Container>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
-            onLeaveFeedback={handleBtnClick}
+            onLeaveFeedback={this.handleBtnClick}
           />
         </Section>
         <Section title="Statistics">
